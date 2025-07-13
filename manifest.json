@@ -1,0 +1,36 @@
+{
+    "name": "Beautiful Slides",
+    "description": "Transform Google Slides to match a selected template",
+    "version": "0.1",
+    "manifest_version": 3,
+    "permissions": [
+      "identity",
+      "scripting",
+      "storage"
+    ],
+    "oauth2": {
+      "client_id": "[CLIENT_ID_TBD].apps.googleusercontent.com",
+      "scopes": [
+        "https://www.googleapis.com/auth/presentations",
+        "https://www.googleapis.com/auth/drive.readonly"
+      ]
+    },
+    "host_permissions": [
+      "https://docs.google.com/presentation/*",
+      "https://www.googleapis.com/*"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_title": "Transform Slides"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://docs.google.com/presentation/*"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ]
+  }
+  
