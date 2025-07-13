@@ -11,8 +11,7 @@
     "oauth2": {
       "client_id": "[CLIENT_ID_TBD].apps.googleusercontent.com",
       "scopes": [
-        "https://www.googleapis.com/auth/presentations",
-        "https://www.googleapis.com/auth/drive.readonly"
+        "https://www.googleapis.com/auth/presentations"
       ]
     },
     "host_permissions": [
